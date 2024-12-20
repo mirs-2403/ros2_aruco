@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 480
+camera_name: uvc_camera_(046d:0825)
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [907.45392,   0.     , 314.39774,
+           0.     , 908.89575, 242.96477,
+           0.     ,   0.     ,   1.     ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.005051, -0.061859, 0.001548, -0.006501, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [905.96735,   0.     , 311.51859,   0.     ,
+           0.     , 909.90973, 242.92509,   0.     ,
+           0.     ,   0.     ,   1.     ,   0.     ]
