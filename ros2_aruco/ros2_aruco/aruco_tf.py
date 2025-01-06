@@ -8,11 +8,11 @@ class ArucoPosePublisher(Node):
     def __init__(self):
         super().__init__('aruco_pose_publisher')
 
-        # Create TF2 Buffer and Listener
+        # TF2バッファとリスナーを作成
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        # Subscriber to ArUco marker PoseArray
+        # ArUcoマーカーのPoseArrayを購読
         self.aruco_subscription = self.create_subscription(
             PoseArray,
             'aruco_poses',
@@ -20,13 +20,13 @@ class ArucoPosePublisher(Node):
             10
         )
 
-        # Publisher for PoseStamped in map frame
-        self.pose_publisher = self.create_publisher(PoseStamped, 'aruco_pose_in_map', 10)
+        # base_linkフレームでPoseStampedを発行
+        self.pose_publisher = self.create_publisher(PoseStamped, 'aruco_pose_in_base_link', 10)
 
     def aruco_callback(self, msg):
         try:
             for pose in msg.poses:
-                # Get transform from camera to base_link
+                # カメラからbase_linkへの変換を取得
                 self.get_logger().info(f'DID!')
                 camera_to_base_link = self.tf_buffer.lookup_transform(
                     'base_link',
@@ -34,38 +34,28 @@ class ArucoPosePublisher(Node):
                     rclpy.time.Time()
                 )
 
-                # Transform Pose to base_link frame
+                # Poseをbase_linkフレームに変換
                 pose_in_base_link = self.transform_pose(pose, camera_to_base_link)
 
-                # Get transform from base_link to map
-                base_link_to_map = self.tf_buffer.lookup_transform(
-                    'map',
-                    'base_link',
-                    rclpy.time.Time()
-                )
-
-                # Transform Pose to map frame
-                pose_in_map = self.transform_pose(pose_in_base_link, base_link_to_map)
-                
-                # Create PoseStamped to publish
+                # 発行するPoseStampedを作成
                 pose_stamped = PoseStamped()
                 pose_stamped.header.stamp = self.get_clock().now().to_msg()
-                pose_stamped.header.frame_id = 'map'
-                pose_stamped.pose = pose_in_map.pose
+                pose_stamped.header.frame_id = 'base_link'
+                pose_stamped.pose = pose_in_base_link.pose
 
-                # Publish the transformed PoseStamped
+                # 変換されたPoseStampedを発行
                 self.pose_publisher.publish(pose_stamped)
 
         except TransformException as ex:
             self.get_logger().warn(f'Transform error: {ex}')
 
     def transform_pose(self, pose, transform):
-        """Transforms a Pose using a given TransformStamped."""
-        # Extract translation and rotation from transform
+        # transformStampedを使用してPoseを変換
+        # 変換から平行移動と回転を抽出
         translation = transform.transform.translation
         rotation = transform.transform.rotation
 
-        # Convert pose position and orientation to homogeneous matrix
+        # Poseの位置と方向を同次行列に変換
         pose_matrix = tf_transformations.quaternion_matrix([
             pose.orientation.x,
             pose.orientation.y,
@@ -76,7 +66,7 @@ class ArucoPosePublisher(Node):
         pose_matrix[1, 3] = pose.position.y
         pose_matrix[2, 3] = pose.position.z
 
-        # Convert transform to homogeneous matrix
+        # 変換を同次行列に変換
         transform_matrix = tf_transformations.quaternion_matrix([
             rotation.x, rotation.y, rotation.z, rotation.w
         ])
@@ -84,10 +74,10 @@ class ArucoPosePublisher(Node):
         transform_matrix[1, 3] = translation.y
         transform_matrix[2, 3] = translation.z
 
-        # Apply transform to pose
+        # 変換をPoseに適用
         transformed_matrix = tf_transformations.concatenate_matrices(transform_matrix, pose_matrix)
 
-        # Extract transformed position and orientation
+        # 変換された位置と方向を抽出
         transformed_pose = PoseStamped()
         transformed_pose.header.frame_id = transform.header.frame_id
         transformed_pose.header.stamp = self.get_clock().now().to_msg()
