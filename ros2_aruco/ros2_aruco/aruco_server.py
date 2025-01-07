@@ -57,9 +57,9 @@ class ArucoService(Node):
         corners, marker_ids, _ = cv2.aruco.detectMarkers(cv_image, self.aruco_dictionary, parameters=self.aruco_parameters)
 
         if marker_ids is not None:
-            self.get_logger().warn(f'marker error')
             rvecs, tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(corners, self.marker_size, self.intrinsic_mat, self.distortion)
             self.detected_markers = [(marker_id[0], tvec, rvec) for marker_id, tvec, rvec in zip(marker_ids, tvecs, rvecs)]
+            self.detect_time = self.get_clock().now()
 
     def get_marker_pose_callback(self, request, response):
         camera_frame = self.camera1_frame if request.camera_id == 1 else self.camera2_frame
@@ -73,6 +73,12 @@ class ArucoService(Node):
             )
 
             if not hasattr(self, 'detected_markers') or len(self.detected_markers) == 0:
+                response.success = False
+                return response
+
+            # 現在時間と最後にマーカーを検出した時間の差がmax_time_diffより大きい場合は失敗
+            max_time_diff = 0.5
+            if (self.get_clock().now() - self.detect_time).nanoseconds / 1e9 > max_time_diff:
                 response.success = False
                 return response
 
