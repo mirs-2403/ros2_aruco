@@ -11,10 +11,10 @@ def generate_launch_description():
         'aruco_parameters.yaml'
     )
 
-    aruco_node = Node(
+    aruco_server = Node(
         package='ros2_aruco',
-        executable='aruco_node',
-        parameters=[aruco_params]
+        executable='aruco_server',
+        #parameters=[aruco_params]
     )
 
     aruco_tf_node = Node(
@@ -38,7 +38,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        aruco_node,
-        #v4l2_node,
-        aruco_tf_node
+        aruco_server,
+        v4l2_node,
+        #aruco_tf_node
     ])

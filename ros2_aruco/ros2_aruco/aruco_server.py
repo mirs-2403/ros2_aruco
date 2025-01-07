@@ -57,6 +57,7 @@ class ArucoService(Node):
         corners, marker_ids, _ = cv2.aruco.detectMarkers(cv_image, self.aruco_dictionary, parameters=self.aruco_parameters)
 
         if marker_ids is not None:
+            self.get_logger().warn(f'marker error')
             rvecs, tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(corners, self.marker_size, self.intrinsic_mat, self.distortion)
             self.detected_markers = [(marker_id[0], tvec, rvec) for marker_id, tvec, rvec in zip(marker_ids, tvecs, rvecs)]
 
