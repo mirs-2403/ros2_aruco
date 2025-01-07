@@ -39,6 +39,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         aruco_node,
-        v4l2_node,
+        #v4l2_node,
         aruco_tf_node
     ])

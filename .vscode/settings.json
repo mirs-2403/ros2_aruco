@@ -1,0 +1,27 @@
+{
+    "ros.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/oumuika/Documents/mirs2403/install/web_with_ros2/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2bag_extensions/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/rosbag2_py_wrapper/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2_aruco_interfaces/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2_aruco/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/mirs_msgs/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/carry_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/oumuika/Documents/mirs2403/install/web_with_ros2/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2bag_extensions/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/rosbag2_py_wrapper/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2_aruco_interfaces/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/ros2_aruco/lib/python3.10/site-packages",
+        "/home/oumuika/Documents/mirs2403/install/mirs_msgs/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/oumuika/Documents/mirs2403/install/carry_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

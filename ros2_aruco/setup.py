@@ -26,7 +26,9 @@ setup(
         'console_scripts': [
             'aruco_node = ros2_aruco.aruco_node:main',
             'aruco_generate_marker = ros2_aruco.aruco_generate_marker:main',
-            'aruco_tf = ros2_aruco.aruco_tf:main'
+            'aruco_tf = ros2_aruco.aruco_tf:main',
+            'aruco_server = ros2_aruco.aruco_server:main',
+            'aruco_client = ros2_aruco.aruco_client:main',
         ],
     },
 )

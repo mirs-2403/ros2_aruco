@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/oumuika/Documents/mirs2403/install/ros2_aruco_interfaces/include/**",
+        "/home/oumuika/Documents/mirs2403/install/mirs_msgs/include/**",
+        "/home/oumuika/Documents/mirs2403/install/micro_ros_agent/include/**",
+        "/home/oumuika/Documents/mirs2403/install/micro_ros_msgs/include/**",
+        "/home/oumuika/Documents/mirs2403/install/carry_msgs/include/**",
+        "/home/oumuika/Documents/mirs2403/install/behaviortree_cpp/include/**",
+        "/opt/ros/humble/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

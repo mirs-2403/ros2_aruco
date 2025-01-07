@@ -1,0 +1,5 @@
+int32 camera_id
+---
+bool success
+geometry_msgs/PoseStamped pose
+int32 marker_id
