@@ -1,0 +1,57 @@
+[0.768s] Invoking command in '/home/oumuika/Documents/mirs2403/src/ros2_aruco/ros2_aruco': PYTHONPATH=/home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_aruco build --build-base /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build install --record /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/install.log --single-version-externally-managed install_data
+[0.974s] running egg_info
+[0.974s] creating ../build/ros2_aruco/ros2_aruco.egg-info
+[0.974s] writing ../build/ros2_aruco/ros2_aruco.egg-info/PKG-INFO
+[0.974s] writing dependency_links to ../build/ros2_aruco/ros2_aruco.egg-info/dependency_links.txt
+[0.975s] writing entry points to ../build/ros2_aruco/ros2_aruco.egg-info/entry_points.txt
+[0.975s] writing requirements to ../build/ros2_aruco/ros2_aruco.egg-info/requires.txt
+[0.975s] writing top-level names to ../build/ros2_aruco/ros2_aruco.egg-info/top_level.txt
+[0.975s] writing manifest file '../build/ros2_aruco/ros2_aruco.egg-info/SOURCES.txt'
+[0.977s] reading manifest file '../build/ros2_aruco/ros2_aruco.egg-info/SOURCES.txt'
+[0.977s] writing manifest file '../build/ros2_aruco/ros2_aruco.egg-info/SOURCES.txt'
+[0.978s] running build
+[0.978s] running build_py
+[0.978s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build
+[0.978s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib
+[0.978s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.978s] copying ros2_aruco/__init__.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.978s] copying ros2_aruco/aruco_server.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.978s] copying ros2_aruco/aruco_tf.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.979s] copying ros2_aruco/aruco_node.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.979s] copying ros2_aruco/aruco_generate_marker.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.979s] copying ros2_aruco/aruco_client.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco
+[0.979s] running install
+[0.979s] running install_lib
+[0.980s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.980s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/__init__.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/aruco_server.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/aruco_tf.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/aruco_node.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/aruco_generate_marker.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] copying /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build/lib/ros2_aruco/aruco_client.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco
+[0.981s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/__init__.py to __init__.cpython-310.pyc
+[0.981s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/aruco_server.py to aruco_server.cpython-310.pyc
+[0.982s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/aruco_tf.py to aruco_tf.cpython-310.pyc
+[0.983s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/aruco_node.py to aruco_node.cpython-310.pyc
+[0.984s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/aruco_generate_marker.py to aruco_generate_marker.cpython-310.pyc
+[0.984s] byte-compiling /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco/aruco_client.py to aruco_client.cpython-310.pyc
+[0.984s] running install_data
+[0.984s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ament_index
+[0.984s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ament_index/resource_index
+[0.985s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ament_index/resource_index/packages
+[0.985s] copying resource/ros2_aruco -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ament_index/resource_index/packages
+[0.985s] copying package.xml -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ros2_aruco
+[0.985s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ros2_aruco/launch
+[0.985s] copying launch/aruco_recognition.launch.py -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ros2_aruco/launch
+[0.985s] creating /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ros2_aruco/config
+[0.985s] copying config/aruco_parameters.yaml -> /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/share/ros2_aruco/config
+[0.985s] running install_egg_info
+[0.988s] Copying ../build/ros2_aruco/ros2_aruco.egg-info to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages/ros2_aruco-0.1.0-py3.10.egg-info
+[0.989s] running install_scripts
+[1.006s] Installing aruco_client script to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/ros2_aruco
+[1.006s] Installing aruco_generate_marker script to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/ros2_aruco
+[1.006s] Installing aruco_node script to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/ros2_aruco
+[1.006s] Installing aruco_server script to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/ros2_aruco
+[1.006s] Installing aruco_tf script to /home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/ros2_aruco
+[1.006s] writing list of installed files to '/home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/install.log'
+[1.039s] Invoked command in '/home/oumuika/Documents/mirs2403/src/ros2_aruco/ros2_aruco' returned '0': PYTHONPATH=/home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_aruco build --build-base /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/build install --record /home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco/install.log --single-version-externally-managed install_data

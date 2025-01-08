@@ -62,7 +62,7 @@ class ArucoService(Node):
             self.detect_time = self.get_clock().now()
 
     def get_marker_pose_callback(self, request, response):
-        camera_frame = self.camera1_frame if request.camera_id in [1, 3] else self.camera2_frame
+        camera_frame = self.camera1_frame if request.camera_id == 1 else self.camera2_frame
 
         try:
             # カメラからmapへの変換を取得

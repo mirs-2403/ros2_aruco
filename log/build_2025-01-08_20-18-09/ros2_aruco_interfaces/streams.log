@@ -1,0 +1,18 @@
+[0.252s] Invoking command in '/home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/oumuika/Documents/mirs2403/install/ros2_aruco:/opt/ros/humble /usr/bin/cmake /home/oumuika/Documents/mirs2403/src/ros2_aruco/ros2_aruco_interfaces -DCMAKE_INSTALL_PREFIX=/home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco_interfaces
+[0.410s] -- The C compiler identification is GNU 11.4.0
+[0.528s] -- The CXX compiler identification is GNU 11.4.0
+[0.539s] -- Detecting C compiler ABI info
+[0.608s] -- Detecting C compiler ABI info - done
+[0.615s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.616s] -- Detecting C compile features
+[0.616s] -- Detecting C compile features - done
+[0.620s] -- Detecting CXX compiler ABI info
+[0.706s] -- Detecting CXX compiler ABI info - done
+[0.713s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.713s] -- Detecting CXX compile features
+[0.713s] -- Detecting CXX compile features - done
+[0.729s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.887s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.024s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.085s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.088s] Invoked command in '/home/oumuika/Documents/mirs2403/src/ros2_aruco/build/ros2_aruco_interfaces' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/oumuika/Documents/mirs2403/install/ros2_aruco:/opt/ros/humble /usr/bin/cmake /home/oumuika/Documents/mirs2403/src/ros2_aruco/ros2_aruco_interfaces -DCMAKE_INSTALL_PREFIX=/home/oumuika/Documents/mirs2403/src/ros2_aruco/install/ros2_aruco_interfaces
