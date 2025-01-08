@@ -17,6 +17,12 @@ def generate_launch_description():
         #parameters=[aruco_params]
     )
 
+    aruco_server_2 = Node(
+        package='ros2_aruco',
+        executable='aruco_server_2',
+        #parameters=[aruco_params]
+    )
+
     aruco_tf_node = Node(
         package='ros2_aruco',
         executable='aruco_tf',
@@ -26,19 +32,35 @@ def generate_launch_description():
     v4l2_node = Node(
         package='v4l2_camera',
         executable='v4l2_camera_node',
-        name='v4l2_camera_node',
+        name='v4l2_camera_node_1',
+        namespace='camera_1',
+        output='screen',
+        parameters=[
+            {'video_device': '/dev/video4'},
+            {'image_size': [640,480]},
+            {'pixel_format': 'YUYV'},
+            {'camera_frame_id': 'camera_1'}
+        ]
+    )
+
+    v4l2_node_2 = Node(
+        package='v4l2_camera',
+        executable='v4l2_camera_node',
+        name='v4l2_camera_node_2',
+        namespace='camera_2',
         output='screen',
         parameters=[
             {'video_device': '/dev/video2'},
-            {'image_width': 680},
-            {'image_height': 480},
+            {'image_size': [640,480]},
             {'pixel_format': 'YUYV'},
-            {'camera_frame_id': 'camera_frame'}
+            {'camera_frame_id': 'camera_2'}
         ]
     )
 
     return LaunchDescription([
         aruco_server,
+        aruco_server_2,
         v4l2_node,
+        v4l2_node_2
         #aruco_tf_node
     ])

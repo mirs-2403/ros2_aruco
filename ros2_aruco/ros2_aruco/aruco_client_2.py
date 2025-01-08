@@ -7,7 +7,7 @@ from ros2_aruco_interfaces.srv import GetMarkerPose
 class ArucoClient(Node):
     def __init__(self):
         super().__init__('aruco_client')
-        self.client = self.create_client(GetMarkerPose, 'get_marker_pose_1')
+        self.client = self.create_client(GetMarkerPose, 'get_marker_pose_2')
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         self.req = GetMarkerPose.Request()

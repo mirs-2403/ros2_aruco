@@ -28,7 +28,9 @@ setup(
             'aruco_generate_marker = ros2_aruco.aruco_generate_marker:main',
             'aruco_tf = ros2_aruco.aruco_tf:main',
             'aruco_server = ros2_aruco.aruco_server:main',
+            'aruco_server_2 = ros2_aruco.aruco_server_2:main',
             'aruco_client = ros2_aruco.aruco_client:main',
+            'aruco_client_2 = ros2_aruco.aruco_client_2:main',
         ],
     },
 )

@@ -11,8 +11,8 @@ from sensor_msgs.msg import CameraInfo, Image
 
 class ArucoService(Node):
     def __init__(self):
-        super().__init__('aruco_service_1')
-        self.srv = self.create_service(GetMarkerPose, 'get_marker_pose_1', self.get_marker_pose_callback)
+        super().__init__('aruco_service_2')
+        self.srv = self.create_service(GetMarkerPose, 'get_marker_pose_2', self.get_marker_pose_callback)
         
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -39,8 +39,8 @@ class ArucoService(Node):
         self.aruco_dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.__getattribute__(dictionary_id_name))
         self.aruco_parameters = cv2.aruco.DetectorParameters()
 
-        self.create_subscription(CameraInfo, '/camera_1/camera_info', self.info_callback, 10)
-        self.create_subscription(Image, '/camera_1/image_raw', self.image_callback, 10)
+        self.create_subscription(CameraInfo, '/camera_2/camera_info', self.info_callback, 10)
+        self.create_subscription(Image, '/camera_2/image_raw', self.image_callback, 10)
 
     def info_callback(self, info_msg):
         self.info_msg = info_msg
