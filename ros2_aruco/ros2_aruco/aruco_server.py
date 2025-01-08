@@ -99,11 +99,15 @@ class ArucoService(Node):
             pose.pose.orientation.z = quat[2]
             pose.pose.orientation.w = quat[3]
 
-            # Poseをmapフレームに変換
-            transformed_pose = self.transform_pose(pose, camera_to_map_transform)
+            if request.camera_id == 3:
+                pose.header.frame_id = 'base_link'
+                response.pose = pose
+            else:
+                # Poseをmapフレームに変換
+                transformed_pose = self.transform_pose(pose, camera_to_map_transform)
+                response.pose = transformed_pose
 
             response.success = True
-            response.pose = transformed_pose
             response.marker_id = int(marker_id)
         except TransformException as ex:
             self.get_logger().warn(f'Transform error: {ex}')
