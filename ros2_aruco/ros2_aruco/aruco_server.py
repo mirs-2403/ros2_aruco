@@ -72,6 +72,13 @@ class ArucoService(Node):
                 rclpy.time.Time()
             )
 
+            # カメラからbase_linkへの変換を取得
+            camera_to_base_link_transform = self.tf_buffer.lookup_transform(
+                'base_link',
+                camera_frame,
+                rclpy.time.Time()
+            )
+
             if not hasattr(self, 'detected_markers') or len(self.detected_markers) == 0:
                 response.success = False
                 return response
@@ -100,8 +107,9 @@ class ArucoService(Node):
             pose.pose.orientation.w = quat[3]
 
             if request.camera_id == 3:
-                pose.header.frame_id = 'base_link'
-                response.pose = pose
+                # Poseをbase_linkフレームに変換
+                transformed_pose = self.transform_pose(pose, camera_to_base_link_transform)
+                response.pose = transformed_pose
             else:
                 # Poseをmapフレームに変換
                 transformed_pose = self.transform_pose(pose, camera_to_map_transform)
